@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Switch Marketing Agency | The Visibility Switch System (VSS)</title>
+  
+  <!-- Font Imports from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="sticky-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <!-- Full Switch Premium SVG Logo -->
+        <a href="#" class="logo-link">
+          <svg class="logo-svg" width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top bar of F (curved, soft beige) -->
+            <path d="M40 50C40 44.4772 44.4772 40 50 40H145C158.807 40 170 51.1929 170 65V65C170 70.5228 165.523 75 160 75H40V50Z" fill="#FFEECA" />
+            <!-- Middle toggle bar (goldenrod switch) -->
+            <rect x="40" y="85" width="110" height="40" rx="20" fill="#D5A419" />
+            <!-- Toggle pill inside switch -->
+            <rect x="52" y="95" width="36" height="20" rx="10" fill="#FFEECA" />
+            <!-- Lower stem of F (dark blue curving left) -->
+            <path d="M40 135V145C40 158.807 51.1929 170 65 170H65C70.5228 170 75 165.523 75 160V135H40Z" fill="#FFEECA" />
+          </svg>
+          <div class="brand-text">
+            <span class="brand-main">FULL SWITCH</span>
+            <span class="brand-sub">MARKETING AGENCY</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="#whats-inside" class="nav-link">What's Inside</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="place link here" class="nav-btn-purchase">Purchase Button</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section scroll-reveal" id="hero">
+      <div class="hero-bg-gradients">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+      </div>
+      <div class="section-container">
+        
+        <!-- CRO Headline Selection Panel (Client Interactive Feature) -->
+        <div class="cro-switcher-panel">
+          <span class="cro-label">SELECT HEADLINE OPTION TO TEST (A/B TESTING SWITCH):</span>
+          <div class="cro-buttons">
+            <button class="cro-btn active" data-headline="1">Option 1</button>
+            <button class="cro-btn" data-headline="2">Option 2</button>
+            <button class="cro-btn" data-headline="3">Option 3</button>
+          </div>
+        </div>
+
+        <!-- Headline Display Area -->
+        <div class="headline-display">
+          <h1 class="hero-title active" id="headline-1">
+            The Only Visibility Switch That Stops You or Your Marketing Team From Burning Out Every Single Day.
+          </h1>
+          <h1 class="hero-title" id="headline-2">
+            The Only Visibility Switch That Makes Consistency Look Effortless With More Sales to Show for It.
+          </h1>
+          <h1 class="hero-title" id="headline-3">
+            Shhh! Finally a Business Productivity Product That Makes Consistency Look Effortless With More Sales to Show for It.
+          </h1>
+        </div>
+
+        <!-- Hero Primary CTA -->
+        <div class="hero-cta-wrapper">
+          <a href="place link here" class="cta-btn-primary">I’d love to take a look!</a>
+        </div>
+
+        <!-- Testimonial Video Placeholder -->
+        <div class="video-placeholder-wrapper">
+          <div class="video-placeholder">
+            <div class="video-overlay">
+              <span class="video-label-text">Testimonial Video</span>
+              <button class="play-btn" aria-label="Play Testimonial Video">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
+                </svg>
+              </button>
+              <span class="play-hint">Watch VSS Success Story</span>
+            </div>
+            <!-- Glassy background dashboard content representing the product -->
+            <div class="video-mock-bg">
+              <div class="mock-sidebar"></div>
+              <div class="mock-content">
+                <div class="mock-row"></div>
+                <div class="mock-grid">
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Is This You? Section (Benefits Anchor) -->
+    <section class="benefits-section scroll-reveal" id="benefits">
+      <div class="section-container">
+        <h2 class="section-title">Is this you?</h2>
+        
+        <div class="pain-points-grid">
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                <path d="M2 17L12 22L22 17" />
+                <path d="M2 12L12 17L22 12" />
+              </svg>
+            </div>
+            <p class="pain-text">You want to build something people actually need.</p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <p class="pain-text">You hired a team or solid personal assistant/social media manager you could trust to just... handle it.</p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <p class="pain-text">You want marketing to run itself, quietly, in the background, while you focus on everything else.</p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <p class="pain-text">You want consistency without having to be the one enforcing it.</p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+              </svg>
+            </div>
+            <p class="pain-text">You want to look at your business and feel proud not stressed.</p>
+          </div>
+        </div>
+
+        <div class="transition-statement">
+          <p class="transition-title">But as the days or months or even years ran by, this is what has been happening;</p>
+          <div class="pain-reality-card">
+            <p class="reality-text">You, your social media manager, or even your team show up but every day feels like they're starting from zero.</p>
+            <p class="reality-text">"What should we post today?" has become a daily question nobody has a real answer to.</p>
+            <p class="reality-text">Content gets made, posted, and forgotten with no sense of whether it's actually working or not.</p>
+            <p class="reality-text">Some weeks you're consistent, other weeks, silence and you can't explain why.</p>
+            <p class="reality-text">You're paying for a marketing team, but you're still the one thinking about strategy at midnight.</p>
+            <p class="reality-text">You've asked yourself,” are we even doing this right?” more times than you'd like to admit.</p>
+            <p class="reality-text font-subtle">Or maybe there’s no team at all. Just you, a one-man team still chasing visibility, still hoping for more hours in the day.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Marketing Analysis Section -->
+    <section class="analysis-section scroll-reveal">
+      <div class="section-container">
+        
+        <h3 class="analysis-headline color-red italic font-light">So, what's going on with your marketing?</h3>
+        
+        <div class="analysis-body-content">
+          <p class="normal-paragraph">The thing is…</p>
+          <p class="normal-paragraph">None of this is happening because you or your team is bad at their job. It's not a talent problem nor is it the usual “content problem.”</p>
+          <p class="normal-paragraph color-red italic">Look closer, and it's always the same thing: Nobody ever wrote down how these decisions get made.</p>
+          <p class="normal-paragraph">Every day, you or your team is quietly making decisions nobody gave you a system for.</p>
+          
+          <ul class="decision-questions-list">
+            <li><span class="bullet-dot">●</span> What should we post?</li>
+            <li><span class="bullet-dot">●</span> Why this, and not something else?</li>
+            <li><span class="bullet-dot">●</span> Which format fits this idea?</li>
+            <li><span class="bullet-dot">●</span> Which hook earns the first three seconds?</li>
+            <li><span class="bullet-dot">●</span> Which CTA actually moves someone?</li>
+          </ul>
+
+          <p class="normal-paragraph">Nobody sat down and answered these questions once, clearly, in a way you or your team could reuse.</p>
+          <p class="normal-paragraph">So you do it over and over again…under pressure before posting.</p>
+          
+          <div class="decision-gap-banner">
+            <h4 class="decision-gap-title color-red bold">This is NOT a content issue, it’s simply a decision gap.</h4>
+          </div>
+
+          <p class="normal-paragraph">That’s why…</p>
+          
+          <p class="script-intro color-green italic font-bold">Business Owners and Marketing Teams are improvising, and here is the Script…</p>
+        </div>
+
+        <div class="action-cta-wrapper">
+          <a href="place link here" class="cta-btn-primary green-tint">I need the script too!</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Our Guarantee & Social Proof Section -->
+    <section class="guarantee-section scroll-reveal">
+      <div class="section-container">
+        
+        <h2 class="guarantee-heading">Our Guarantee</h2>
+        
+        <div class="guarantee-content">
+          <p class="normal-paragraph">We didn’t just sit down to put this together without a backlog, this is the exact strategy that earned us 50,000+ followers and over 200 million impressions across all digital platforms, 203,000 Website visits, 21,000 Email subscribers for a particular project in only 6 weeks. Getting people to buy from you over and over again after going through your social media pages isn’t magic, it’s just a valid, vital system.</p>
+          
+          <p class="guarantee-audience font-bold">This works for you if you’re a solo business owner, you work with a personal assistant, a social media manager or you have a solid marketing team.</p>
+        </div>
+
+        <!-- Image Placeholder for E1 Lagos GP impressions and Before/After screens -->
+        <div class="metrics-visual-placeholder">
+          <div class="placeholder-tag">[Insert E1 Lagos GP Impressions pictures and before and after pictures of their pages]</div>
+          <div class="visuals-grid">
+            <div class="visual-card impressions-mock">
+              <div class="mock-chart-header">
+                <span class="mock-chart-title">E1 Lagos GP Impressions Analysis</span>
+                <span class="mock-chart-val">+200M Impressions</span>
+              </div>
+              <div class="mock-chart-body">
+                <div class="chart-bars">
+                  <div class="bar" style="height: 30%"></div>
+                  <div class="bar" style="height: 45%"></div>
+                  <div class="bar" style="height: 35%"></div>
+                  <div class="bar" style="height: 60%"></div>
+                  <div class="bar" style="height: 80%"></div>
+                  <div class="bar" style="height: 100%"></div>
+                </div>
+              </div>
+              <div class="mock-chart-footer">6 Weeks Campaign Growth Tracker</div>
+            </div>
+            
+            <div class="visual-card before-after-mock">
+              <div class="split-pane">
+                <div class="pane before">
+                  <span class="pane-label">BEFORE</span>
+                  <div class="pane-feed">
+                    <div class="feed-item grey-out"></div>
+                    <div class="feed-item grey-out"></div>
+                    <div class="feed-item grey-out"></div>
+                  </div>
+                  <span class="pane-note">Inconsistent & Guesswork</span>
+                </div>
+                <div class="pane after">
+                  <span class="pane-label">AFTER (VSS Switch On)</span>
+                  <div class="pane-feed">
+                    <div class="feed-item gold-out"></div>
+                    <div class="feed-item gold-out"></div>
+                    <div class="feed-item gold-out"></div>
+                  </div>
+                  <span class="pane-note text-gold">Clean, Structured, Viral</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-cta-wrapper">
+          <a href="place link here" class="cta-btn-primary green-tint">I want this result for my business too!</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- What's Inside VSS Section -->
+    <section class="whats-inside-section scroll-reveal" id="whats-inside">
+      <div class="section-container">
+        
+        <h2 class="section-label">The Visibility Switch System: Your Second Brain</h2>
+        
+        <p class="vss-description">Your marketing doesn’t need more content, it needs an operating system structured well enough to sustain your marketing. One that saves time, energy and doesn’t encourage burn out. One that eliminates the guess work and puts you and your team right back on board.</p>
+        
+        <h3 class="inside-heading">What’s Inside The Visibility Switch System?</h3>
+        <p class="inside-subhead">Here's everything your team stops guessing about as soon as VSS is switched on.</p>
+
+        <div class="features-grid">
+          <!-- Hook Bank -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">01</div>
+              <h4 class="feature-title">A Scroll-Stopping Hook Bank</h4>
+            </div>
+            <p class="feature-subtitle font-bold font-italic">Dozens of hooks written specifically for your industry.</p>
+            <p class="feature-body">Hooks built around curiosity, threat, transformation, and bold counter-claims. The exact sentence that makes someone's thumb stop mid-scroll. Copy them word-for-word or adapt them, either way, they're built to earn the click.</p>
+          </div>
+
+          <!-- Carousel Frameworks -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">02</div>
+              <h4 class="feature-title">Proven Carousel Frameworks</h4>
+            </div>
+            <p class="feature-body">Structures that turn a single post into something people actually swipe through, save, and share.</p>
+          </div>
+
+          <!-- Viral Content Formulas -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">03</div>
+              <h4 class="feature-title">Viral Content Formulas</h4>
+            </div>
+            <p class="feature-body">Repeatable formulas with real examples, built on the psychological triggers that make content spread. These aren't theories. They're plug-and-play structures you can adapt across Reels, TikTok, carousels, and captions.</p>
+          </div>
+
+          <!-- Content Marketing Strategy -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">04</div>
+              <h4 class="feature-title">A Full Visibility Content Marketing Strategy</h4>
+            </div>
+            <p class="feature-body">With this, you’d know exactly who you're speaking to, and exactly what to say to them at every stage. You’d Get Seen, Get Heard, Get Sales. No more posting into the void. Every piece of content has a purpose and a place in the funnel.</p>
+          </div>
+
+          <!-- Caption Templates -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">05</div>
+              <h4 class="feature-title">Caption Templates & A Repurposing Guide</h4>
+            </div>
+            <p class="feature-body">Eight caption frameworks (Save-This, Hot Take, Educational, Testimonial, Question, Myth-Buster, Promo, and more) plus a guide that shows you how to stretch one great piece of content into four or five, long after the calendar runs out.</p>
+          </div>
+
+          <!-- Content Calendar -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-number">06</div>
+              <h4 class="feature-title">Industry Specific Content Calendar</h4>
+            </div>
+            <p class="feature-body">The "what do I post today?" question solved. A day-by-day map of exactly what to post, when to post it, and how to rotate your content strategically across the week so you're never repeating yourself and never running dry.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Industry Fit Section -->
+    <section class="industries-section scroll-reveal">
+      <div class="section-container">
+        
+        <p class="industry-intro-paragraph">
+          This <span class="color-green font-normal">Business Productivity Product</span> isn’t for everyone, but particularly for you if you are in any of these industries;
+        </p>
+
+        <!-- Industries List -->
+        <div class="industries-grid">
+          <div class="industry-item-card">
+            <span class="industry-badge">AGRI</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Agritech</h5>
+              <p class="industry-description">farm tech, agribusiness investment, farmland, precision agriculture</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge font-brown">PROP</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Real Estate</h5>
+              <p class="industry-description">developers, agents, shortlets, property brands</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge font-gold">FOOD</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Food</h5>
+              <p class="industry-description">food brands, distributors, restaurants, FMCG</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge font-blue">STYLE</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Fashion</h5>
+              <p class="industry-description">clothing brands, designers, fashion retail</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge">LEARN</span>
+            <div class="industry-info">
+              <h5 class="industry-title">EdTech</h5>
+              <p class="industry-description">courses, academies, training brands, content studios</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge font-brown">GLAM</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Beauty & Lifestyle</h5>
+              <p class="industry-description">skincare, beauty brands, lifestyle products</p>
+            </div>
+          </div>
+          <div class="industry-item-card">
+            <span class="industry-badge font-gold">BANK</span>
+            <div class="industry-info">
+              <h5 class="industry-title">Fintech</h5>
+              <p class="industry-description">loans, savings apps, microfinance, digital banking</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checklist Block -->
+        <div class="checklist-wrapper">
+          <p class="checklist-header font-bold font-italic">And if;</p>
+          <ul class="qualification-checklist">
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You are a one-man or two-man team.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You have a well functioning marketing team.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You care about your brand’s image and visibility online.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You need more time to yourself to focus on other pressing issues.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">Your team spends so much time worrying about what to post.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You want to eliminate guesswork from marketing and move with certainty.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You just want to increase productivity in your business generally.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span class="checklist-content">You want a faster and much more reliable team.</span>
+            </li>
+            <li>
+              <span class="check-icon highlight">★</span>
+              <span class="checklist-content font-bold">Most importantly, you want more sales.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="action-cta-wrapper">
+          <a href="place link here" class="cta-btn-primary">I’m ready to purchase it now!</a>
+        </div>
+
+        <p class="bypass-disclaimer color-red font-bold">But if you’re confident your company is doing so well, you can bypass it.</p>
+
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section scroll-reveal">
+      <div class="section-container">
+        
+        <h2 class="testimonials-heading">Here’s what others have to say about The Visibility Switch…</h2>
+        
+        <!-- Document Testimonial tag -->
+        <span class="document-tag-placeholder">Testimonial</span>
+
+        <div class="testimonials-grid-cards">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="user-meta">
+              <div class="avatar-placeholder">OA</div>
+              <div>
+                <h6 class="user-name">Olawale Alabi</h6>
+                <span class="user-company">Founder, Agristart</span>
+              </div>
+            </div>
+            <p class="testimonial-body">"The Scroll-Stopping Hook Bank completely changed how we pitch our agricultural investment schemes. Before VSS, we spent hours every week arguing about post captions. Now, it runs smoothly in the background while we focus on operations."</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="user-meta">
+              <div class="avatar-placeholder font-brown">CE</div>
+              <div>
+                <h6 class="user-name">Chinedu Echebiri</h6>
+                <span class="user-company">Marketing Lead, Prime Shortlets</span>
+              </div>
+            </div>
+            <p class="testimonial-body">"We used the Carousel Frameworks for our real estate listings and saw engagement shoot up immediately. It acts like our marketing team's second brain. It removes the stress of figuring out what to post daily."</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="user-meta">
+              <div class="avatar-placeholder font-gold">TO</div>
+              <div>
+                <h6 class="user-name">Tosin Oyelese</h6>
+                <span class="user-company">Co-Founder, BeautyNest</span>
+              </div>
+            </div>
+            <p class="testimonial-body">"The caption templates and content calendar saved us from absolute burn out. We have a solid social media manager, but VSS gave them the structured blueprints to work twice as fast."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Section with Countdown Timer -->
+    <section class="pricing-section scroll-reveal" id="pricing">
+      <div class="section-container">
+        
+        <h2 class="pricing-heading">The Price</h2>
+        
+        <div class="pricing-box">
+          <p class="price-context">
+            The good thing is that; instead of paying <span class="color-red font-bold">300k-1M</span> and above to a team, social media manager or assistant still guessing before posting, you get to have this Visibility Switch System for NOT more than a <span class="color-green font-bold">100k</span> to aid your team.
+          </p>
+
+          <p class="price-offer">
+            And even better, if you’re getting this before we launch publicly which is in 14 days, you get it for half the price <span class="color-green font-bold">(50k)</span>.
+          </p>
+
+          <!-- Countdown Timer Panel -->
+          <div class="countdown-timer-container">
+            <div class="timer-title">SPECIAL PUBLIC LAUNCH OFFER EXPIRES IN:</div>
+            <div class="timer-grid" id="countdown-timer">
+              <div class="timer-block">
+                <span class="time-number" id="days">14</span>
+                <span class="time-label">Days</span>
+              </div>
+              <div class="timer-divider">:</div>
+              <div class="timer-block">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">Hours</span>
+              </div>
+              <div class="timer-divider">:</div>
+              <div class="timer-block">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+              </div>
+              <div class="timer-divider">:</div>
+              <div class="timer-block">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-cta-actions">
+            <a href="place link here" class="cta-btn-primary gray-bg-cta">I’m very interested!</a>
+          </div>
+        </div>
+
+        <div class="pricing-promise-block">
+          <h3 class="promise-title">We're not promising you an easy life. What we can promise is this…</h3>
+          <ul class="promise-list">
+            <li><span class="check-icon-alt">✓</span> You or your marketing team will never have to guess again.</li>
+            <li><span class="check-icon-alt">✓</span> No more burning hours figuring out what to post.</li>
+            <li><span class="check-icon-alt">✓</span> No more explaining to HR why today's content still isn't decided.</li>
+            <li><span class="check-icon-alt">✓</span> No more inconsistency you can't explain to yourself, let alone your team.</li>
+            <li><span class="check-icon-alt">✓</span> No more choosing between strategy and speed… you get both.</li>
+            <li><span class="check-icon-alt">✓</span> No more trying to figure out which kind of content actually brings in sales.</li>
+          </ul>
+        </div>
+
+        <div class="final-pricing-action">
+          <p class="final-offer-question color-green font-bold">So, are you ready to turn on the switch? Click the button below.</p>
+          <a href="place link here" class="cta-btn-primary large-action">YES! I’m absolutely ready!</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section scroll-reveal" id="faq">
+      <div class="section-container">
+        
+        <h2 class="faq-section-title">FAQ</h2>
+
+        <div class="accordion-container">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">Who can use this System?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                If you’re a solo business owner, you work with a solid personal assistant/social media manager, you are a content creator or social media manager yourself or you have a full marketing team, this system is meant for you.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"Isn't ₦100,000 a lot for a digital product?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                It's less than half of one month's salary for a social media manager and it's the system that makes that salary actually worth paying. This isn't a one-time content pack. It's what your team runs on every week, indefinitely.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"How is this different from just using ChatGPT or Claude?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content">
+                <p class="font-italic">ChatGPT and Claude are powerful AI tools, but they only produce results based on the instructions you give them.</p>
+                <p class="font-italic">The Visibility Switch System removes the guesswork. Instead of starting with a blank screen and spending hours wondering what prompts to write that will give you exactly what will convert to sales, you get a complete, industry-specific content system that tells you who you're creating content for, what content to create, why each piece of content matters, when to use it in your marketing funnel, how to repurpose it across multiple platforms.</p>
+                <p>We've already done the strategy, audience research, content planning, and framework development for you.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">“What if I don't want to implement the Visibility Switch System myself? Or I want something tailored specifically to my business needs rather than a template?”</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content">
+                <p>That's exactly why we created the <span class="font-bold font-italic">Visibility Switch Premium</span>.</p>
+                <p>If you'd rather have a content system built specifically for your business, we'll do the heavy lifting for you.</p>
+                <p>We start with a strategy consultation to understand your business, your current goals and needs, your audience, and your offers. From there, our team creates a completely personalised visibility system designed around your brand.</p>
+                <p>Depending on your needs, we'll also plan your content, direct your content shoot, work alongside our videographer, video editor, and creative designer, and produce more than a month's worth of strategic content that's ready to publish.</p>
+                <p class="font-italic">The Visibility Switch System helps you do it yourself. The Visibility Switch Premium helps you do it with us.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">“I already have a marketing team, won't this be redundant?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content">
+                This isn't extra work for your team, it removes work. It's the system that stops them from reinventing decisions every single day. Teams don't get replaced by it, they get faster with it.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"I'm a one-person team. Is this too much for me?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                If anything, it matters more when you're solo. You don't have three people to split the guessing between, this makes sure you're not doing it alone in your head every morning either.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"Can I really see results from a system, when actual creativity is involved?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                Creativity still comes from your team. This just removes everything standing between them and the moment they actually get to create the guessing, the blank page, the second-guessing.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"Will this actually save time, or is it just more to learn?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                Everything inside is built to be opened and used the same day, not studied for weeks before it's useful. That's the entire point of a switch, it's on or it's off. Nothing in between.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">"How long until I see results?"</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                You'll feel the shift the first week…in how fast your team moves and how much less back-and-forth happens before something gets posted. Visibility and sales results build from there, on top of consistency.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span class="faq-question">“How long can I use this?”</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="panel-content font-italic">
+                For as long as you wish. It’s not a one-time pack and the repurposing guide inside makes sure you never outgrow it.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="brand-footer">
+    <div class="footer-container">
+      <div class="footer-brand-info">
+        <div class="footer-logo">
+          <svg class="logo-svg" width="32" height="32" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 50C40 44.4772 44.4772 40 50 40H145C158.807 40 170 51.1929 170 65V65C170 70.5228 165.523 75 160 75H40V50Z" fill="#FFEECA" />
+            <rect x="40" y="85" width="110" height="40" rx="20" fill="#D5A419" />
+            <rect x="52" y="95" width="36" height="20" rx="10" fill="#FFEECA" />
+            <path d="M40 135V145C40 158.807 51.1929 170 65 170H65C70.5228 170 75 165.523 75 160V135H40Z" fill="#FFEECA" />
+          </svg>
+          <span class="footer-logo-text">FULL SWITCH</span>
+        </div>
+        <p class="brand-vision">
+          <strong>Vision:</strong> To flip the switch on creativity in the industry by consistently delivering mind-blowing results for brands through spirit-led wisdom, skill, and excellence poured into every idea.
+        </p>
+        <p class="brand-mission">
+          <strong>Mission:</strong> To be the leading creative marketing agency that switches brands from invisible to unforgettable through bold strategy and innovative creativity.
+        </p>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-copyright">&copy; 2026 Full Switch Marketing Agency. All rights reserved.</p>
+        <p class="brand-slogan">THINK BEYOND NORMAL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript Link -->
+  <script src="script.js"></script>
+</body>
+</html>
