@@ -151,12 +151,19 @@ ul {
   gap: 12px;
 }
 
-.logo-svg {
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
   transition: transform 0.5s ease;
 }
 
-.logo-link:hover .logo-svg {
-  transform: rotate(-10deg) scale(1.05);
+.logo-link:hover .logo-image {
+  transform: scale(1.03);
+}
+
+.footer-logo-image {
+  height: 32px;
 }
 
 .brand-text {
@@ -326,62 +333,8 @@ section {
   right: -200px;
 }
 
-/* CRO Headline Switcher Panel */
-.cro-switcher-panel {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 238, 202, 0.05);
-  border: 1px dashed rgba(213, 164, 25, 0.4);
-  padding: 12px 24px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  max-width: 100%;
-}
-
-.cro-label {
-  font-family: var(--font-primary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-goldenrod);
-}
-
-.cro-buttons {
-  display: flex;
-  gap: 8px;
-}
-
-.cro-btn {
-  background: rgba(27, 42, 73, 0.8);
-  border: 1px solid var(--border-light);
-  color: rgba(230, 240, 255, 0.7);
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-family: var(--font-primary);
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
-
-.cro-btn:hover {
-  color: #FFFFFF;
-  border-color: rgba(230, 240, 255, 0.3);
-}
-
-.cro-btn.active {
-  background-color: var(--color-goldenrod);
-  border-color: var(--color-goldenrod);
-  color: var(--color-dark-blue);
-  box-shadow: 0 4px 10px rgba(213, 164, 25, 0.2);
-}
-
 /* Headline Display */
 .headline-display {
-  position: relative;
-  min-height: 200px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -394,18 +347,6 @@ section {
   max-width: 950px;
   margin: 0 auto;
   line-height: 1.15;
-  opacity: 0;
-  transform: translateY(20px);
-  position: absolute;
-  pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.hero-title.active {
-  opacity: 1;
-  transform: translateY(0);
-  position: relative;
-  pointer-events: auto;
 }
 
 .hero-cta-wrapper {
@@ -741,152 +682,63 @@ section {
   margin-top: 30px;
 }
 
-/* Metrics Visual Placeholder */
-.metrics-visual-placeholder {
+/* E1 Lagos GP Impression Section */
+.impressions-visual-container {
   max-width: 960px;
-  margin: 0 auto 60px auto;
-  border: 1px dashed var(--color-brown);
-  border-radius: 20px;
-  padding: 30px;
-  background: rgba(134, 117, 85, 0.03);
+  margin: 40px auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.placeholder-tag {
+.impressions-main-title {
   font-family: var(--font-primary);
-  font-size: 11px;
+  font-size: 26px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--color-brown);
-  text-transform: uppercase;
-  margin-bottom: 20px;
   text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--color-soft-ivory);
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.visuals-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.visual-card {
+.impressions-card {
   background: var(--bg-dark-card);
   border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.impressions-card-label {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-goldenrod);
+  text-transform: uppercase;
+}
+
+.impressions-image-wrapper {
+  width: 100%;
   border-radius: 16px;
-  padding: 24px;
-}
-
-/* Mock chart styling */
-.impressions-mock {
-  display: flex;
-  flex-direction: column;
-}
-
-.mock-chart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.mock-chart-title {
-  font-family: var(--font-primary);
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(230, 240, 255, 0.6);
-}
-
-.mock-chart-val {
-  font-family: var(--font-primary);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-green);
-}
-
-.mock-chart-body {
-  height: 120px;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 16px;
-}
-
-.chart-bars {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.bar {
-  flex-grow: 1;
-  background: linear-gradient(180deg, var(--color-goldenrod) 0%, rgba(213, 164, 25, 0.2) 100%);
-  border-radius: 4px 4px 0 0;
-  transition: height 1.5s ease-out;
-}
-
-.mock-chart-footer {
-  font-size: 12px;
-  color: rgba(230, 240, 255, 0.5);
-  text-align: center;
-}
-
-/* Before and After feeds mock */
-.before-after-mock {
-  padding: 16px;
-}
-
-.split-pane {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  height: 100%;
-}
-
-.pane {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 12px;
-  border: 1px solid rgba(230, 240, 255, 0.03);
-}
-
-.pane-label {
-  font-family: var(--font-primary);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: rgba(230, 240, 255, 0.5);
-}
-
-.pane-feed {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 16px 0;
+  justify-content: center;
+  align-items: center;
 }
 
-.feed-item {
-  height: 20px;
-  border-radius: 4px;
-}
-
-.feed-item.grey-out {
-  background-color: rgba(230, 240, 255, 0.05);
-}
-
-.feed-item.gold-out {
-  background-color: rgba(213, 164, 25, 0.3);
-  border: 1px solid rgba(213, 164, 25, 0.6);
-}
-
-.pane-note {
-  font-size: 10px;
-  font-weight: 600;
+.impressions-display-img {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
+  display: block;
 }
 
 /* What's Inside VSS (Second Brain) */

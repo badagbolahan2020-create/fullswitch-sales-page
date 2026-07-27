@@ -1,30 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // -------------------------------------------------------------
-  // 1. Headline Option Switcher (A/B Test Switcher)
-  // -------------------------------------------------------------
-  const croButtons = document.querySelectorAll(".cro-btn");
-  const headlines = document.querySelectorAll(".hero-title");
-
-  croButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Remove active class from buttons
-      croButtons.forEach(btn => btn.classList.remove("active"));
-      // Add active class to clicked button
-      button.classList.add("active");
-
-      const targetHeadlineId = `headline-${button.dataset.headline}`;
-
-      // Transition headlines
-      headlines.forEach(headline => {
-        if (headline.id === targetHeadlineId) {
-          headline.classList.add("active");
-        } else {
-          headline.classList.remove("active");
-        }
-      });
-    });
-  });
 
   // -------------------------------------------------------------
   // 2. Sticky Header & Mobile Nav
@@ -167,5 +142,4 @@ document.addEventListener("DOMContentLoaded", () => {
   revealElements.forEach(element => {
     revealObserver.observe(element);
   });
-
 });
