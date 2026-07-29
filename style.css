@@ -14,7 +14,7 @@
   
   /* Brand-specified highlight colors */
   --color-red: #D5A419;      /* Changed from red to Goldenrod per user request */
-  --color-green: #48BB78;    /* Fresh premium green for highlights */
+  --color-green: #D5A419;    /* Changed from green to Goldenrod per user request */
   
   /* UI Accents */
   --bg-gradient: radial-gradient(circle at 50% 50%, #203356 0%, #131E35 100%);
@@ -120,6 +120,8 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Sticky Navbar Styles */
@@ -236,8 +238,8 @@ ul {
 
 .cta-btn-primary.green-tint {
   background-color: var(--color-green);
-  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
-  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(213, 164, 25, 0.3);
+  color: var(--color-dark-blue);
 }
 
 .cta-btn-primary.green-tint:hover {
@@ -290,6 +292,7 @@ ul {
 section {
   padding: 120px 0;
   position: relative;
+  overflow: hidden;
 }
 
 /* Hero Section */
@@ -398,10 +401,10 @@ section {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-green);
-  background: rgba(72, 187, 120, 0.1);
+  background: rgba(213, 164, 25, 0.1);
   padding: 6px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(72, 187, 120, 0.2);
+  border: 1px solid rgba(213, 164, 25, 0.2);
 }
 
 .play-btn {
@@ -741,6 +744,143 @@ section {
   display: block;
 }
 
+/* Impressions Section Subsections & Grid Layouts */
+.impression-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.impression-sub-title {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--color-soft-ivory);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+
+.impression-sub-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-goldenrod);
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+.social-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.compare-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition-smooth);
+}
+
+.compare-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold-accent);
+}
+
+.compare-card-label {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-goldenrod);
+  text-transform: uppercase;
+}
+
+.compare-images-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.compare-img-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(230, 240, 255, 0.05);
+  aspect-ratio: 9 / 18.5; /* forces standard mobile screen ratio */
+  width: 100%;
+}
+
+.compare-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 5;
+}
+
+.badge-before {
+  background: rgba(19, 30, 53, 0.9);
+  color: var(--color-soft-ivory);
+  border: 1px solid rgba(230, 240, 255, 0.1);
+}
+
+.badge-after {
+  background: var(--color-goldenrod);
+  color: var(--color-dark-blue);
+  box-shadow: 0 2px 8px rgba(213, 164, 25, 0.4);
+}
+
+/* Single visual adjustments */
+.impressions-card.single-visual {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.impressions-card.single-visual .impressions-image-wrapper {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(230, 240, 255, 0.05);
+}
+
+.impressions-card.single-visual .impressions-display-img {
+  max-height: 600px;
+  object-fit: contain;
+}
+
 /* What's Inside VSS (Second Brain) */
 .section-label {
   font-size: 36px;
@@ -842,13 +982,16 @@ section {
 }
 
 .industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   margin-bottom: 70px;
 }
 
 .industry-item-card {
+  flex: 1 1 300px;
+  max-width: 352px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-light);
   border-radius: 16px;
@@ -870,7 +1013,7 @@ section {
   font-weight: 800;
   letter-spacing: 0.1em;
   color: var(--color-green);
-  background: rgba(72, 187, 120, 0.1);
+  background: rgba(213, 164, 25, 0.1);
   padding: 6px 12px;
   border-radius: 6px;
   text-transform: uppercase;
@@ -1010,8 +1153,8 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(72, 187, 120, 0.1);
-  border: 1px solid rgba(72, 187, 120, 0.3);
+  background: rgba(213, 164, 25, 0.1);
+  border: 1px solid rgba(213, 164, 25, 0.3);
   color: var(--color-green);
   font-family: var(--font-primary);
   font-weight: 700;
@@ -1482,6 +1625,11 @@ section {
     gap: 16px;
     text-align: center;
   }
+  
+  .social-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1513,4 +1661,166 @@ section {
   .timer-block {
     min-width: 50px;
   }
+}
+
+/* -------------------------------------------------------------
+   Background Blobs & Decorative Elements System
+   ------------------------------------------------------------- */
+
+.bg-blob {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease; /* Optimized for scroll performance */
+  transform: translateY(var(--scroll-offset, 0px));
+}
+
+/* Color Classes (Solid fills - highly visible, high brightness) */
+.blob-cream {
+  fill: var(--color-soft-ivory);
+  opacity: 0.9;
+}
+
+.blob-pale {
+  fill: var(--color-pale-blue);
+  opacity: 0.9;
+}
+
+.blob-gold {
+  fill: var(--color-goldenrod);
+  opacity: 0.9;
+}
+
+/* Gradient Classes (Alternating blends between the 3 colors) */
+.blob-grad-1 {
+  fill: url(#grad-ivory-pale);
+  opacity: 0.9;
+}
+
+.blob-grad-2 {
+  fill: url(#grad-pale-gold);
+  opacity: 0.9;
+}
+
+.blob-grad-3 {
+  fill: url(#grad-gold-ivory);
+  opacity: 0.9;
+}
+
+/* Combined Float & Parallax Scroll Animations */
+@keyframes float-slow {
+  0% {
+    transform: translateY(var(--scroll-offset, 0px)) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(var(--scroll-offset, 0px) - 45px)) rotate(10deg);
+  }
+  100% {
+    transform: translateY(var(--scroll-offset, 0px)) rotate(0deg);
+  }
+}
+
+@keyframes float-reverse {
+  0% {
+    transform: translateY(var(--scroll-offset, 0px)) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(var(--scroll-offset, 0px) + 40px)) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(var(--scroll-offset, 0px)) rotate(0deg);
+  }
+}
+
+.blob-float-1 {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.blob-float-2 {
+  animation: float-reverse 9s ease-in-out infinite;
+}
+
+/* Section Specific Placements (Scaled up by ~1.5x - 2x for visual prominence) */
+
+/* Hero Section Blobs */
+.hero-blob-1 { top: 8%; left: -4%; width: 250px; height: 250px; }
+.hero-blob-2 { top: 35%; right: 2%; width: 180px; height: 180px; }
+.hero-blob-3 { bottom: 12%; left: 6%; width: 200px; height: 200px; }
+
+/* Benefits Section Blobs */
+.benefits-blob-1 { top: 12%; left: 2%; width: 220px; height: 220px; }
+.benefits-blob-2 { bottom: 15%; right: -3%; width: 200px; height: 200px; }
+
+/* Analysis Section Blobs */
+.analysis-blob-1 { top: 18%; right: 2%; width: 240px; height: 240px; }
+.analysis-blob-2 { bottom: 12%; left: 3%; width: 180px; height: 180px; }
+
+/* Guarantee Section Blobs */
+.guarantee-blob-1 { top: 10%; right: 1%; width: 210px; height: 210px; }
+.guarantee-blob-2 { bottom: 20%; left: -4%; width: 240px; height: 240px; }
+
+/* What's Inside Section Blobs */
+.inside-blob-1 { top: 22%; left: -4%; width: 260px; height: 260px; }
+.inside-blob-2 { bottom: 15%; right: 2%; width: 200px; height: 200px; }
+
+/* Industries Section Blobs */
+.industries-blob-1 { top: 12%; left: 3%; width: 190px; height: 190px; }
+.industries-blob-2 { bottom: 20%; right: 2%; width: 220px; height: 220px; }
+
+/* Testimonials Section Blobs */
+.testimonials-blob-1 { top: 15%; left: 1%; width: 240px; height: 240px; }
+.testimonials-blob-2 { bottom: 10%; right: -2%; width: 200px; height: 200px; }
+
+/* Pricing Section Blobs */
+.pricing-blob-1 { top: 25%; left: 2%; width: 220px; height: 220px; }
+.pricing-blob-2 { bottom: 12%; right: 3%; width: 180px; height: 180px; }
+
+/* FAQ Section Blobs */
+.faq-blob-1 { top: 12%; right: 2%; width: 225px; height: 225px; }
+.faq-blob-2 { bottom: 15%; left: 2%; width: 200px; height: 200px; }
+
+/* Responsive adjustments to maintain Hierarchy & White Space on smaller viewports */
+@media (max-width: 1024px) {
+  .hero-blob-1 { left: -6%; width: 180px; height: 180px; }
+  .hero-blob-2 { right: -3%; width: 130px; height: 130px; }
+  .hero-blob-3 { width: 150px; height: 150px; }
+  .benefits-blob-1 { width: 160px; height: 160px; }
+  .benefits-blob-2 { right: -6%; width: 140px; height: 140px; }
+  .inside-blob-1 { left: -8%; width: 180px; height: 180px; }
+}
+
+@media (max-width: 768px) {
+  /* Scale down and adjust opacity for mobile layout to ensure no text overlaps */
+  .bg-blob {
+    opacity: 0.1 !important;
+  }
+  
+  /* Reposition/hide specific blobs that might clutter mobile viewport */
+  .hero-blob-1 { top: 8%; left: -8%; width: 130px; height: 130px; }
+  .hero-blob-2 { top: 32%; right: -6%; width: 100px; height: 100px; }
+  .hero-blob-3 { display: none; } /* Hide extra blobs to maintain visual balance */
+  
+  .benefits-blob-1 { top: 8%; left: -6%; width: 110px; height: 110px; }
+  .benefits-blob-2 { display: none; }
+  
+  .analysis-blob-1 { width: 120px; height: 120px; right: -6%; }
+  .analysis-blob-2 { display: none; }
+  
+  .guarantee-blob-1 { width: 110px; height: 110px; right: -5%; }
+  .guarantee-blob-2 { display: none; }
+  
+  .inside-blob-1 { width: 130px; height: 130px; left: -8%; }
+  .inside-blob-2 { display: none; }
+  
+  .industries-blob-1 { width: 100px; height: 100px; left: -5%; }
+  .industries-blob-2 { display: none; }
+  
+  .testimonials-blob-1 { width: 120px; height: 120px; left: -6%; }
+  .testimonials-blob-2 { display: none; }
+  
+  .pricing-blob-1 { width: 120px; height: 120px; left: -5%; }
+  .pricing-blob-2 { display: none; }
+  
+  .faq-blob-1 { width: 120px; height: 120px; right: -5%; }
+  .faq-blob-2 { display: none; }
 }

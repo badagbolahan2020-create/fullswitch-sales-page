@@ -142,4 +142,24 @@ document.addEventListener("DOMContentLoaded", () => {
   revealElements.forEach(element => {
     revealObserver.observe(element);
   });
+
+  // -------------------------------------------------------------
+  // 6. Background Blobs Parallax Scroll Effect
+  // -------------------------------------------------------------
+  const blobs = document.querySelectorAll(".bg-blob");
+  
+  // Assign individual scroll speed coefficients (alternating directions for depth)
+  blobs.forEach((blob, index) => {
+    const speeds = [0.15, -0.1, 0.2, -0.15, 0.1, -0.08, 0.18];
+    blob.dataset.speed = speeds[index % speeds.length];
+  });
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    blobs.forEach(blob => {
+      const speed = parseFloat(blob.dataset.speed) || 0.1;
+      const yOffset = scrollTop * speed;
+      blob.style.setProperty("--scroll-offset", `${yOffset}px`);
+    });
+  });
 });

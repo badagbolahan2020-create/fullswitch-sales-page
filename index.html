@@ -11,9 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   
   <!-- CSS Link -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
+
+  <!-- Global SVG Gradients for Background Blobs -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad-ivory-pale" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFEECA" />
+        <stop offset="100%" stop-color="#E6F0FF" />
+      </linearGradient>
+      <linearGradient id="grad-pale-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E6F0FF" />
+        <stop offset="100%" stop-color="#D5A419" />
+      </linearGradient>
+      <linearGradient id="grad-gold-ivory" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D5A419" />
+        <stop offset="100%" stop-color="#FFEECA" />
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- Sticky Glassmorphic Header -->
   <header class="sticky-nav">
@@ -46,6 +64,19 @@
     
     <!-- Hero Section -->
     <section class="hero-section scroll-reveal" id="hero">
+      <!-- Decorative background solid blobs (from reference design shapes) -->
+      <svg class="bg-blob blob-gold blob-float-1 hero-blob-1" viewBox="0 0 100 100">
+        <!-- Sparkle shape -->
+        <path d="M50,10 C50,35 65,50 90,50 C65,50 50,65 50,90 C50,65 35,50 10,50 C35,50 50,35 50,10 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-1 blob-float-2 hero-blob-2" viewBox="0 0 100 100">
+        <!-- Clover shape -->
+        <path d="M50,50 C38,38 38,20 50,20 C62,20 62,38 50,50 C62,38 80,38 80,50 C80,62 62,62 50,50 C62,62 62,80 50,80 C38,80 38,62 50,50 C38,62 20,62 20,50 C20,38 38,38 50,50 Z"/>
+      </svg>
+      <svg class="bg-blob blob-pale blob-float-1 hero-blob-3" viewBox="0 0 100 100">
+        <!-- Circle shape -->
+        <circle cx="50" cy="50" r="40"/>
+      </svg>
       <div class="hero-bg-gradients">
         <div class="gradient-sphere sphere-1"></div>
         <div class="gradient-sphere sphere-2"></div>
@@ -95,6 +126,14 @@
 
     <!-- Is This You? Section (Benefits Anchor) -->
     <section class="benefits-section scroll-reveal" id="benefits">
+      <svg class="bg-blob blob-cream blob-float-2 benefits-blob-1" viewBox="0 0 100 100">
+        <!-- Clover shape -->
+        <path d="M50,50 C38,38 38,20 50,20 C62,20 62,38 50,50 C62,38 80,38 80,50 C80,62 62,62 50,50 C62,62 62,80 50,80 C38,80 38,62 50,50 C38,62 20,62 20,50 C20,38 38,38 50,50 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-2 blob-float-1 benefits-blob-2" viewBox="0 0 100 100">
+        <!-- Pill shape -->
+        <rect x="15" y="30" width="70" height="40" rx="20" ry="20"/>
+      </svg>
       <div class="section-container">
         <h2 class="section-title">Is this you?</h2>
         
@@ -102,12 +141,12 @@
           <div class="pain-card">
             <div class="pain-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" />
-                <path d="M2 17L12 22L22 17" />
-                <path d="M2 12L12 17L22 12" />
+                <!-- AI Processor Chip Icon -->
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M9 4v16M15 4v16M4 9h16M4 15h16" />
               </svg>
             </div>
-            <p class="pain-text">You want to build something people actually need.</p>
+            <p class="pain-text">You’ve been using AI to grow your brand but it hasn’t delivered the result you expected.</p>
           </div>
 
           <div class="pain-card">
@@ -149,6 +188,17 @@
             </div>
             <p class="pain-text">You want to look at your business and feel proud not stressed.</p>
           </div>
+
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <!-- Globe / Visibility Icon -->
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            <p class="pain-text">You want to stay visible online like the big brands you know without burning out.</p>
+          </div>
         </div>
 
         <div class="transition-statement">
@@ -169,6 +219,14 @@
 
     <!-- Marketing Analysis Section -->
     <section class="analysis-section scroll-reveal">
+      <svg class="bg-blob blob-grad-3 blob-float-1 analysis-blob-1" viewBox="0 0 100 100">
+        <!-- Wavy organic blob -->
+        <path d="M50,15 C65,12 85,18 88,35 C91,52 82,72 70,82 C58,92 38,90 25,80 C12,70 8,50 15,35 C22,20 35,18 50,15 Z"/>
+      </svg>
+      <svg class="bg-blob blob-gold blob-float-2 analysis-blob-2" viewBox="0 0 100 100">
+        <!-- Leaf shape -->
+        <path d="M20,80 Q50,20 80,20 Q50,80 20,80 Z"/>
+      </svg>
       <div class="section-container">
         
         <h3 class="analysis-headline color-red italic font-light">So, what's going on with your marketing?</h3>
@@ -208,6 +266,14 @@
 
     <!-- Our Guarantee & Social Proof Section -->
     <section class="guarantee-section scroll-reveal">
+      <svg class="bg-blob blob-cream blob-float-1 guarantee-blob-1" viewBox="0 0 100 100">
+        <!-- Arch/U-shape -->
+        <path d="M30,80 L30,50 A20,20 0 0,1 70,50 L70,80 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-1 blob-float-2 guarantee-blob-2" viewBox="0 0 100 100">
+        <!-- Clover shape -->
+        <path d="M50,50 C38,38 38,20 50,20 C62,20 62,38 50,50 C62,38 80,38 80,50 C80,62 62,62 50,50 C62,62 62,80 50,80 C38,80 38,62 50,50 C38,62 20,62 20,50 C20,38 38,38 50,50 Z"/>
+      </svg>
       <div class="section-container">
         
         <h2 class="guarantee-heading">Our Guarantee</h2>
@@ -222,17 +288,58 @@
         <div class="impressions-visual-container">
           <h3 class="impressions-main-title">E1 Lagos GP Impression</h3>
           
-          <div class="impressions-card">
-            <span class="impressions-card-label">Instagram & TikTok Campaigns</span>
-            <div class="impressions-image-wrapper">
-              <img src="e1-lagos-gp-1.png" alt="Instagram and TikTok Before and After" class="impressions-display-img">
+          <!-- Subsection 1: Social Media Before & After -->
+          <div class="impression-subsection">
+            <h4 class="impression-sub-title">Social Media Before & After</h4>
+            <div class="social-compare-grid">
+              <!-- Instagram Card -->
+              <div class="compare-card">
+                <span class="compare-card-label">Instagram Growth</span>
+                <div class="compare-images-wrapper">
+                  <div class="compare-img-box">
+                    <span class="img-badge badge-before">Before</span>
+                    <img src="Instagram Before.jpg" alt="E1 Lagos GP Instagram Before Profile">
+                  </div>
+                  <div class="compare-img-box">
+                    <span class="img-badge badge-after">After</span>
+                    <img src="Instagram After.jpg" alt="E1 Lagos GP Instagram After Profile">
+                  </div>
+                </div>
+              </div>
+              <!-- TikTok Card -->
+              <div class="compare-card">
+                <span class="compare-card-label">TikTok Growth</span>
+                <div class="compare-images-wrapper">
+                  <div class="compare-img-box">
+                    <span class="img-badge badge-before">Before</span>
+                    <img src="TikTok Before.jpg" alt="E1 Lagos GP TikTok Before Profile">
+                  </div>
+                  <div class="compare-img-box">
+                    <span class="img-badge badge-after">After</span>
+                    <img src="TikTok After.jpg" alt="E1 Lagos GP TikTok After Profile">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="impressions-card">
-            <span class="impressions-card-label">YouTube Campaigns</span>
-            <div class="impressions-image-wrapper">
-              <img src="e1-lagos-gp-2.png" alt="YouTube Before and After" class="impressions-display-img">
+          <!-- Subsection 2: Email Marketing Performance -->
+          <div class="impression-subsection">
+            <h4 class="impression-sub-title">Email Marketing Performance</h4>
+            <div class="impressions-card single-visual">
+              <div class="impressions-image-wrapper">
+                <img src="Email Marketing.jpg" alt="Email Marketing Campaign Performance Dashboard" class="impressions-display-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsection 3: Performance Metric -->
+          <div class="impression-subsection">
+            <h4 class="impression-sub-title">Performance Metric</h4>
+            <div class="impressions-card single-visual">
+              <div class="impressions-image-wrapper">
+                <img src="Performance Metric.png" alt="Performance Metrics Overview Dashboard" class="impressions-display-img">
+              </div>
             </div>
           </div>
         </div>
@@ -246,6 +353,14 @@
 
     <!-- What's Inside VSS Section -->
     <section class="whats-inside-section scroll-reveal" id="whats-inside">
+      <svg class="bg-blob blob-grad-2 blob-float-2 inside-blob-1" viewBox="0 0 100 100">
+        <!-- Pill/Capsule shape -->
+        <rect x="15" y="30" width="70" height="40" rx="20" ry="20"/>
+      </svg>
+      <svg class="bg-blob blob-cream blob-float-1 inside-blob-2" viewBox="0 0 100 100">
+        <!-- Sparkle shape -->
+        <path d="M50,10 C50,35 65,50 90,50 C65,50 50,65 50,90 C50,65 35,50 10,50 C35,50 50,35 50,10 Z"/>
+      </svg>
       <div class="section-container">
         
         <h2 class="section-label">The Visibility Switch System: Your Second Brain</h2>
@@ -317,6 +432,14 @@
 
     <!-- Industry Fit Section -->
     <section class="industries-section scroll-reveal">
+      <svg class="bg-blob blob-pale blob-float-1 industries-blob-1" viewBox="0 0 100 100">
+        <!-- Leaf shape -->
+        <path d="M20,80 Q50,20 80,20 Q50,80 20,80 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-3 blob-float-2 industries-blob-2" viewBox="0 0 100 100">
+        <!-- Organic blob shape -->
+        <path d="M50,15 C65,12 85,18 88,35 C91,52 82,72 70,82 C58,92 38,90 25,80 C12,70 8,50 15,35 C22,20 35,18 50,15 Z"/>
+      </svg>
       <div class="section-container">
         
         <p class="industry-intro-paragraph">
@@ -430,6 +553,14 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials-section scroll-reveal">
+      <svg class="bg-blob blob-grad-1 blob-float-1 testimonials-blob-1" viewBox="0 0 100 100">
+        <!-- Clover shape -->
+        <path d="M50,50 C38,38 38,20 50,20 C62,20 62,38 50,50 C62,38 80,38 80,50 C80,62 62,62 50,50 C62,62 62,80 50,80 C38,80 38,62 50,50 C38,62 20,62 20,50 C20,38 38,38 50,50 Z"/>
+      </svg>
+      <svg class="bg-blob blob-pale blob-float-2 testimonials-blob-2" viewBox="0 0 100 100">
+        <!-- Circle shape -->
+        <circle cx="50" cy="50" r="40"/>
+      </svg>
       <div class="section-container">
         
         <h2 class="testimonials-heading">Here’s what others have to say about The Visibility Switch…</h2>
@@ -480,6 +611,14 @@
 
     <!-- Pricing Section with Countdown Timer -->
     <section class="pricing-section scroll-reveal" id="pricing">
+      <svg class="bg-blob blob-gold blob-float-1 pricing-blob-1" viewBox="0 0 100 100">
+        <!-- Sparkle shape -->
+        <path d="M50,10 C50,35 65,50 90,50 C65,50 50,65 50,90 C50,65 35,50 10,50 C35,50 50,35 50,10 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-2 blob-float-2 pricing-blob-2" viewBox="0 0 100 100">
+        <!-- Arch shape -->
+        <path d="M30,80 L30,50 A20,20 0 0,1 70,50 L70,80 Z"/>
+      </svg>
       <div class="section-container">
         
         <h2 class="pricing-heading">The Price</h2>
@@ -546,6 +685,14 @@
 
     <!-- FAQ Section -->
     <section class="faq-section scroll-reveal" id="faq">
+      <svg class="bg-blob blob-cream blob-float-2 faq-blob-1" viewBox="0 0 100 100">
+        <!-- Leaf shape -->
+        <path d="M20,80 Q50,20 80,20 Q50,80 20,80 Z"/>
+      </svg>
+      <svg class="bg-blob blob-grad-3 blob-float-1 faq-blob-2" viewBox="0 0 100 100">
+        <!-- Clover shape -->
+        <path d="M50,50 C38,38 38,20 50,20 C62,20 62,38 50,50 C62,38 80,38 80,50 C80,62 62,62 50,50 C62,62 62,80 50,80 C38,80 38,62 50,50 C38,62 20,62 20,50 C20,38 38,38 50,50 Z"/>
+      </svg>
       <div class="section-container">
         
         <h2 class="faq-section-title">FAQ</h2>
@@ -712,12 +859,12 @@
       </div>
       <div class="footer-meta">
         <p class="footer-copyright">&copy; 2026 Full Switch Marketing Agency. All rights reserved.</p>
-        <p class="brand-slogan">THINK BEYOND NORMAL.</p>
+        <p class="brand-slogan">CREATIVITY BEYOND NORMAL.</p>
       </div>
     </div>
   </footer>
 
   <!-- Javascript Link -->
-  <script src="script.js"></script>
+  <script src="script.js?v=2.0"></script>
 </body>
 </html>
