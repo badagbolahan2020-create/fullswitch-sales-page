@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#111111"/>
+  
+  <!-- Technical blueprint outlines -->
+  <rect x="4%" y="4%" width="92%" height="92%" fill="none" stroke="#B8A7FF" stroke-width="1" opacity="0.3"/>
+  <rect x="5%" y="5%" width="90%" height="90%" fill="none" stroke="#B8A7FF" stroke-width="1.5" opacity="0.8"/>
+  
+  <!-- Fine layout lines -->
+  <line x1="0" y1="0" x2="800" y2="1200" stroke="#B8A7FF" stroke-width="0.5" opacity="0.2" />
+  <line x1="800" y1="0" x2="0" y2="1200" stroke="#B8A7FF" stroke-width="0.5" opacity="0.2" />
+  
+  <!-- Crop ticks at corners -->
+  <path d="M 0,20 L 0,0 L 20,0" fill="none" stroke="#B8A7FF" stroke-width="1.5"/>
+  <path d="M 780,0 L 800,0 L 800,20" fill="none" stroke="#B8A7FF" stroke-width="1.5"/>
+  <path d="M 0,1180 L 0,1200 L 20,1200" fill="none" stroke="#B8A7FF" stroke-width="1.5"/>
+  <path d="M 780,1200 L 800,1200 L 800,1180" fill="none" stroke="#B8A7FF" stroke-width="1.5"/>
+
+  <!-- Centered Graphic Title (Space Grotesk) -->
+  <text x="50%" y="46%" text-anchor="middle" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="30" fill="#F2EFE7" font-weight="700" letter-spacing="-0.02em">GEOMETRY OF GOD</text>
+  
+  <!-- Subtitle (DM Mono) -->
+  <text x="50%" y="54%" text-anchor="middle" font-family="'DM Mono', monospace" font-size="11" fill="#B8A7FF" font-weight="400" letter-spacing="0.1em">[GG.EDITORIAL-PAGE-01]</text>
+  
+  <!-- Dimensions (DM Mono) -->
+  <text x="50%" y="62%" text-anchor="middle" font-family="'DM Mono', monospace" font-size="9" fill="#F2EFE7" font-weight="300" opacity="0.5" letter-spacing="0.1em">800 X 1200 PX</text>
+</svg>
