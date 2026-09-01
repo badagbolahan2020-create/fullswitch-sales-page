@@ -37,29 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // -------------------------------------------------------------
-  // 3. Countdown Timer (Persistent 14-day loop via LocalStorage)
+  // 3. Countdown Timer (Persistent loop via LocalStorage: 13d 12h 59m)
   // -------------------------------------------------------------
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
 
-  // Check if countdown target exists in storage, if not, set to 14 days from now
-  let targetDate = localStorage.getItem("vss_launch_offer_date");
+  // Check if countdown target exists in storage, if not, set to 13d 12h 59m from now
+  let targetDate = localStorage.getItem("vss_launch_offer_date_v13_12_59");
+  const countdownDurationMs = (13 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (59 * 60 * 1000);
   
   if (!targetDate) {
-    // 14 days in milliseconds: 14 * 24 * 60 * 60 * 1000
-    const fourteenDaysMs = 14 * 24 * 60 * 60 * 1000;
-    const newTarget = new Date().getTime() + fourteenDaysMs;
-    localStorage.setItem("vss_launch_offer_date", newTarget.toString());
+    const newTarget = new Date().getTime() + countdownDurationMs;
+    localStorage.setItem("vss_launch_offer_date_v13_12_59", newTarget.toString());
     targetDate = newTarget;
   } else {
     targetDate = parseInt(targetDate, 10);
-    // If target has already passed, reset to a new 14 days to keep offer active for new session
+    // If target has already passed, reset to keep offer active for new session
     if (targetDate < new Date().getTime()) {
-      const fourteenDaysMs = 14 * 24 * 60 * 60 * 1000;
-      const newTarget = new Date().getTime() + fourteenDaysMs;
-      localStorage.setItem("vss_launch_offer_date", newTarget.toString());
+      const newTarget = new Date().getTime() + countdownDurationMs;
+      localStorage.setItem("vss_launch_offer_date_v13_12_59", newTarget.toString());
       targetDate = newTarget;
     }
   }
