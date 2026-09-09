@@ -1669,8 +1669,18 @@ section {
     font-size: 11px;
   }
   
+  .countdown-timer-container {
+    padding: 20px 12px;
+    margin: 0 auto 30px auto;
+  }
+  
   .time-number {
     font-size: 28px;
+  }
+  
+  .timer-divider {
+    font-size: 24px;
+    padding-bottom: 12px;
   }
   
   .timer-grid {
@@ -1678,7 +1688,7 @@ section {
   }
   
   .timer-block {
-    min-width: 50px;
+    min-width: 44px;
   }
 }
 
