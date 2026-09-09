@@ -9,19 +9,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".sticky-nav");
 
   // Toggle mobile menu
-  mobileMenuToggle.addEventListener("click", () => {
-    mobileMenuToggle.classList.toggle("active");
-    navLinks.classList.toggle("active");
-  });
-
-  // Close mobile menu when clicking navigation links
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenuToggle.classList.remove("active");
-      navLinks.classList.remove("active");
+  if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
     });
-  });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+      }
+    });
+
+    // Close mobile menu when clicking navigation links or mobile purchase button
+    const links = document.querySelectorAll(".nav-link, .mobile-nav-cta");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  }
 
   // Change header styling on scroll
   window.addEventListener("scroll", () => {
