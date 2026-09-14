@@ -1235,70 +1235,6 @@ section {
   margin-bottom: 40px;
 }
 
-/* Countdown timer styling */
-.countdown-timer-container {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 30px 24px;
-  margin: 0 auto 40px auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.timer-title {
-  font-family: var(--font-primary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-goldenrod);
-  margin-bottom: 20px;
-}
-
-.timer-grid {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.timer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 70px;
-}
-
-.time-number {
-  font-family: var(--font-primary);
-  font-size: 36px;
-  font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1;
-}
-
-.time-label {
-  font-family: var(--font-primary);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgba(230, 240, 255, 0.4);
-  margin-top: 8px;
-  letter-spacing: 0.05em;
-}
-
-.timer-divider {
-  font-family: var(--font-primary);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--color-goldenrod);
-  padding-bottom: 16px;
-  animation: pulse-colon 1s infinite alternate;
-}
-
-@keyframes pulse-colon {
-  0% { opacity: 0.3; }
-  100% { opacity: 1; }
-}
 
 .pricing-cta-actions {
   display: flex;
@@ -1790,27 +1726,6 @@ section {
     font-size: 11px;
   }
   
-  .countdown-timer-container {
-    padding: 20px 12px;
-    margin: 0 auto 30px auto;
-  }
-  
-  .time-number {
-    font-size: 28px;
-  }
-  
-  .timer-divider {
-    font-size: 24px;
-    padding-bottom: 12px;
-  }
-  
-  .timer-grid {
-    gap: 8px;
-  }
-  
-  .timer-block {
-    min-width: 44px;
-  }
 }
 
 /* -------------------------------------------------------------

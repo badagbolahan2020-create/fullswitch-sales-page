@@ -47,23 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // -------------------------------------------------------------
-  // 3. Countdown Timer (Stopped at 00:00:00:00)
-  // -------------------------------------------------------------
-  function stopTimer() {
-    const timerElements = [
-      ...document.querySelectorAll("#days, [data-timer='days'], .time-days"),
-      ...document.querySelectorAll("#hours, [data-timer='hours'], .time-hours"),
-      ...document.querySelectorAll("#minutes, [data-timer='minutes'], .time-minutes"),
-      ...document.querySelectorAll("#seconds, [data-timer='seconds'], .time-seconds")
-    ];
-
-    timerElements.forEach(el => {
-      if (el) el.textContent = "00";
-    });
-  }
-
-  stopTimer();
 
   // -------------------------------------------------------------
   // 4. FAQ Accordion
