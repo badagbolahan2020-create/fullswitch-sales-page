@@ -11,8 +11,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   
   <!-- CSS Link -->
-  <link rel="stylesheet" href="style.css?v=3.1">
+  <link rel="stylesheet" href="style.css?v=4.0">
   <script defer src="/_vercel/insights/script.js"></script>
+
+  <style>
+    /* Direct center alignment for the 7th feature card */
+    @media (min-width: 992px) {
+      .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px !important;
+      }
+      .features-grid .feature-card:nth-child(7),
+      .features-grid .feature-card.feature-card-center {
+        grid-column: 2 / span 1 !important;
+      }
+    }
+    @media (min-width: 641px) and (max-width: 991px) {
+      .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+      }
+      .features-grid .feature-card:nth-child(7),
+      .features-grid .feature-card.feature-card-center {
+        grid-column: 1 / -1 !important;
+        max-width: 520px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        justify-self: center !important;
+      }
+    }
+    @media (max-width: 640px) {
+      .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+      }
+      .features-grid .feature-card:nth-child(7),
+      .features-grid .feature-card.feature-card-center {
+        grid-column: 1 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -90,7 +131,7 @@
           <div class="timer-title">PRE-LAUNCH OFFER EXPIRES IN:</div>
           <div class="timer-grid" id="countdown-timer">
             <div class="timer-block">
-              <span class="time-number" id="days">05</span>
+              <span class="time-number" id="days">00</span>
               <span class="time-label">Days</span>
             </div>
             <div class="timer-divider">:</div>
@@ -450,6 +491,15 @@
             </div>
             <p class="feature-body">The "what do I post today?" question solved. A day-by-day map of exactly what to post, when to post it, and how to rotate your content strategically across the week so you're never repeating yourself and never running dry.</p>
           </div>
+
+          <!-- Advertising Campaign Ideas -->
+          <div class="feature-card feature-card-center">
+            <div class="feature-header">
+              <div class="feature-number">07</div>
+              <h4 class="feature-title">Advertising Campaign Ideas</h4>
+            </div>
+            <p class="feature-body">For your TV commercials and digital ads, giving your brand the creative voice that attracts the kind of prospects you desire.</p>
+          </div>
         </div>
 
       </div>
@@ -635,7 +685,7 @@
           </p>
 
           <p class="price-offer">
-            And even better, if you’re getting this before we launch publicly which is in 5 days, you get it for half the price <span class="color-green font-bold">(50k)</span>.
+            We just concluded our pre-launch phase so the VSS price no longer stands at half the price. The offer is still live and running, It is now back to its original valued price at <span class="color-green font-bold">100k</span>.
           </p>
 
           <div class="pricing-cta-actions">
@@ -845,6 +895,6 @@
   </footer>
 
   <!-- Javascript Link -->
-  <script src="script.js?v=3.1"></script>
+  <script src="script.js?v=4.0"></script>
 </body>
 </html>
